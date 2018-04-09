@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #666 !important; }
+
+html {
+  background: none; }
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; }

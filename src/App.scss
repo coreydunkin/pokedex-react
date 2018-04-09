@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P|Roboto+Condensed');
+
+html {
+  background: #333;
+  box-sizing: border-box;
+}
+/* apply a natural box layout model to all elements, but allowing components to change */
+
+
+$break-small: 400px;
+$break-larger-mob: 430px;
+
+body {
+
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  overflow-x: hidden;
+
+  
+  font-family: 'Press Start 2P', sans-serif;
+}
+
+// modal window styles
+
+.ReactModal__Content {
+  position: absolute;
+  top: 80px;
+  left: 80px;
+  right: 80px;
+  bottom: 80px;
+  background: none!important;
+  border: none!important;
+}
+
+.ReactModal__Overlay {
+  background-color: rgba(0,0,0,0.8)!important;
+}
+
+.pokeBox {
+  height: 400px;
+  max-width: 400px;
+  width: 100%;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  padding: 5px;
+
+    background-color: #a89a9a;
+  p.num {
+    font-family: 'Press Start 2P', sans-serif;
+    padding: 10px 20px;
+    background: rgba(255,255,255,0.3);
+    font-size: 1.8em;
+    position: absolute;
+    top: 0px;
+    left: 0px;    
+  }
+  h2 {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 1em;
+    font-family: 'Press Start 2P', sans-serif;
+
+  }
+  button {
+    background: none;
+    border: none;
+    position: absolute; 
+    top: 0px;
+    right: 0px;
+    padding: 10px 20px;
+    background: rgba(255,255,255,0.3);
+    font-size: 1.8em;
+    p {
+      margin: 0px;
+
+      font-family: 'Press Start 2P', sans-serif;
+      background: none!important;
+
+    }
+  }
+
+  img {
+    width: 100%;
+    image-rendering: pixelated;
+    position: absolute;
+
+  }
+}
+
+.info-btn {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  z-index: 999;
+}
+
+span.info {
+  font-size: 0.5em;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: rgba(0,0,0,0.4);
+}
+
+.App {
+  text-align: center;
+  background: none;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 30px;
+  width: auto;
+  display: inline;
+  float: left;
+    height: 80px;
+    margin: 0px 20px 0px 0px;  
+  @media screen and (max-width: $break-small) {
+    &.header {
+    height: 32px;
+    position: absolute;
+    left: 0px;
+    top: -9px;
+    }
+
+  }
+  @media screen and (max-width: $break-larger-mob) {
+    &.header {
+    height: 43px;
+
+    }
+
+  }         
+}
+.list-group {
+  position: relative;
+  min-height: 500px;
+  box-shadow: none!important;
+}
+.loader {
+  position: absolute;
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    top: 50%;
+    transform: translateY(-50%);  
+  .App-logo {
+    animation: App-logo-spin infinite 0.8s ease;
+    height: 40px;
+    float: none;
+  }
+}
+.header-container {
+  max-width: 1220px;
+  width: 100%;
+  margin: 0 auto;
+}
+.App-header {
+  background-color: #333;
+  height: auto;
+  padding: 20px;
+  color: white;
+  font-family: 'Press Start 2P', sans-serif;
+
+  .header-container {
+    .bounceInDown {
+      animation-delay: 1s!important; 
+    }
+  }
+}
+
+
+
+.App-title {
+  font-size: 1.5em;
+  text-align: left;
+  @media screen and (max-width: $break-small) {
+    text-align: center;
+    font-size: 1em;
+    margin: 5px 0px;
+  }      
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.btnRow {
+  margin: 5px;
+}
+
+.container {
+  &.override {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+// Mixin itself
+@mixin clearfix() {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+// Usage as a mixin
+.element {
+  @include clearfix;
+}
+
+.react-autosuggest__container {
+  input {
+    margin: 2px auto;
+    width: 100%;
+    padding: 10px;
+    font-size: 13px;
+    border-radius: 0px;
+    border: none;
+    background: rgba(255,255,255,0.85);
+    color: white;
+  }
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+ul {
+  margin: 20px auto;
+  padding: 0px;
+  max-width: 1220px;
+  width: 100%;
+}
+
+input {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+li {
+  margin: 0px!important;
+  padding: 0px!important;
+  list-style: none;
+  opacity: 0;
+  font-family: 'Press Start 2P', sans-serif;
+  cursor: pointer;
+
+  .list-group-item {
+        -webkit-transition: all 0.2s ease; /* Safari */
+        transition: all 0.2s ease;
+        box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.2);
+        border: none!important;
+        border-radius: 0px!important;
+
+         filter: brightness(100%);
+        img {
+      display: inline-block;
+      vertical-align: middle;
+      -webkit-transform: perspective(1px) translateZ(0);
+      transform: perspective(1px) translateZ(0);
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+      -webkit-transition-duration: 0.3s;
+      transition-duration: 0.3s;         
+        }
+  }
+  &:hover {
+    .list-group-item {
+      -webkit-transition: all 0.2s ease; /* Safari */
+      transition: all 0.2s ease;      
+      
+         filter: brightness(85%);
+      box-shadow: inset 0 3px 30px rgba(0, 0, 0, 0.2);
+      img {
+        transform: scale(1.1);
+      -webkit-animation-name: hvr-icon-wobble-horizontal;
+      animation-name: hvr-icon-wobble-horizontal;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-timing-function: ease-in-out;
+      animation-timing-function: ease-in-out;
+      -webkit-animation-iteration-count: 1;
+      animation-iteration-count: 1;   
+      
+      }
+    }
+  }
+  &#152 {
+    border: 5px solid red;
+
+  background: grey;
+  }
+
+  @for $i from 1 through 151 {
+    &:nth-child( #{$i} ) {
+     -webkit-animation: fadeIn .75s #{$i * 0.15 + 0.5}s ease 1  forwards;
+     -moz-animation: fadeIn .75s #{$i * 0.15 + 0.5}s ease 1 forwards;
+     animation: fadeIn .75s #{$i * 0.15 + 0.5}s ease 1 forwards; 
+      .list-group-item {
+        overflow: hidden;
+        .fadeInDown {
+          animation-delay: #{$i * 0.15 + 0.5}s!important; 
+        }
+      }
+
+    }
+  }
+
+  @for $x from 152 through 160 {
+    &[num='#{$x}'] {
+      display: none!important;
+    }
+  }  
+  .pokebox {
+    border-radius: 5px;
+    padding: 5px;
+    border: 3px solid lightgrey;
+  }
+}
+.text-xs-left {
+  padding-right: 1px!important;
+}
+.text-xs-right {
+  padding-left: 1px!important;
+}
+.btn {
+  border: 1px solid grey;
+  border-radius: 0px!important;
+  background-color: #ee1515;
+  color: white;
+  &:hover {
+    color: offwhite;
+  }
+}
+
+span {
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+// Some cool animation
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@-webkit-keyframes rubberBand {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    -webkit-transform: scale3d(.95, 1.05, 1);
+    transform: scale3d(.95, 1.05, 1);
+  }
+
+  75% {
+    -webkit-transform: scale3d(1.05, .95, 1);
+    transform: scale3d(1.05, .95, 1);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes rubberBand {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    -webkit-transform: scale3d(.95, 1.05, 1);
+    transform: scale3d(.95, 1.05, 1);
+  }
+
+  75% {
+    -webkit-transform: scale3d(1.05, .95, 1);
+    transform: scale3d(1.05, .95, 1);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@-webkit-keyframes hvr-icon-wobble-horizontal {
+  16.65% {
+    -webkit-transform: translateX(6px);
+    transform: translateX(6px);
+  }
+  33.3% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+  49.95% {
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px);
+  }
+  66.6% {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateX(1px);
+    transform: translateX(1px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes hvr-icon-wobble-horizontal {
+  16.65% {
+    -webkit-transform: translateX(6px);
+    transform: translateX(6px);
+  }
+  33.3% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+  49.95% {
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px);
+  }
+  66.6% {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateX(1px);
+    transform: translateX(1px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
