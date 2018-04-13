@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { GET_pokemonS } from './types';
+import { GET_pokemons } from './types';
 
 const ROOT_URL = 'https://pokeapi.co/api/v2/';
 
@@ -16,7 +16,7 @@ export function getpokemons(page) {
     
 
     return {
-        type: GET_pokemonS,
+        type: GET_pokemons,
         payload: request
     }
 }

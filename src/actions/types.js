@@ -1,1 +1,1 @@
-export const GET_pokemonS = 'GET_pokemonS';
+export const GET_pokemons = 'GET_pokemons';

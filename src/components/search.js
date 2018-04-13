@@ -6,7 +6,6 @@ import '../App.css';
 import '../animate.css'
 import {Animated} from 'react-animated-css';
 import Home from './home';
-import PokemonList from './pokemon-list';
 import AutoSuggest from 'react-autosuggest';
 import Palette from 'react-palette';
 import Modal from 'react-modal';
