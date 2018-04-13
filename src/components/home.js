@@ -97,7 +97,7 @@ class Home extends React.Component {
                 <Animated animationIn="bounceInDown" isVisible={true}>
                     <img src={logo} className="App-logo header" alt="logo" />
                 </Animated>  
-                <h1 className="App-title">Corey's <br className="hidden-xs hidden-sm" />Pokedex</h1>
+                <h1 className="App-title">Coreys <br className="hidden-xs hidden-sm" />Pokedex</h1>
 
               </div>
              
